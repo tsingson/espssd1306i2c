@@ -22,5 +22,6 @@ void app_main(void) {
 
     ssd1306_display();
     vTaskDelay(3000 / portTICK_PERIOD_MS);
+    ssd1306_clean();
   }
 }
