@@ -63,6 +63,7 @@ typedef struct
 void init_ssd1306(void);
 esp_err_t ssd1306_print_str(uint8_t x, uint8_t y, const char *text, bool invert);
 esp_err_t ssd1306_display(void);
+esp_err_t ssd1306_clean(void);
 
 
 /**
