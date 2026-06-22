@@ -76,7 +76,8 @@ void init_ssd1306(void) {
   i2c_ssd1306_init(i2c_master_bus, i2c_ssd1306_config, &i2c_ssd1306);
   //  i2c_ssd1306_buffer_image(&i2c_ssd1306, 32, 0, (const uint8_t
   //  *)ssd1306_logo, 64, 64, false); i2c_ssd1306_buffer_to_ram(&i2c_ssd1306);
-  vTaskDelay(100 / portTICK_PERIOD_MS);
+  i2c_ssd1306_buffer_text(&i2c_ssd1306, 0, 0, "tsingsound studio", false);
+  vTaskDelay(500 / portTICK_PERIOD_MS);
   i2c_ssd1306_buffer_clear(&i2c_ssd1306);
 }
 esp_err_t ssd1306_clean(void) {
